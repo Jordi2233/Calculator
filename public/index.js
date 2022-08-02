@@ -70,16 +70,16 @@ for (let i = 0; i < 11; i++) {
 
 
 
+
 procent.onclick = function () {
 
-    if (firstNumber.length === 0 ) {
-        final.innerHTML = "Error"
-        console.log("co")
-    }
-
+ 
 
     if (whichNumber === false) {
 
+        if (firstNumber.length === 0) {
+            firstNumber = 0;
+        }
 
         if (typeof firstNumber === "object") {
 
@@ -109,6 +109,10 @@ procent.onclick = function () {
         }
     } else {
 
+  if (secondNumber.length === 0) {
+            secondNumber = 0;
+        }
+
         if (typeof secondNumber === "object") {
 
             var ln = secondNumber.join("");
@@ -136,9 +140,12 @@ procent.onclick = function () {
 
 pm.onclick = function () {
 
-
-    whichNumber = false;
     if (whichNumber === false) {
+
+        if (firstNumber.length === 0) {
+            firstNumber = 0;
+        }
+
         if (typeof firstNumber === "number") {
 
             var fn = firstNumber;
@@ -154,6 +161,11 @@ pm.onclick = function () {
         fn = parseFloat(fn)
         final.innerHTML = fn;
     } else {
+
+        if (secondNumber.length === 0) {
+            secondNumber = 0;
+        }
+
         if (typeof secondNumber === "number") {
 
             var ln = secondNumber;
